@@ -7,6 +7,7 @@ class Reports extends Component {
         this.state = {
             sensorData: [],
             isLoading: true,
+
         };
     }
 

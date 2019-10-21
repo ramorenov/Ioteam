@@ -12,9 +12,9 @@ class Navbar extends Component {
                     <li>
                         <Link to="/about">Register</Link>
                     </li>
-                    {/* <li>
+                    <li>
                         <Link to="/DashBoard">DashBoard</Link>
-                    </li> */}
+                    </li>
                     <li>
                         <Link to="/Reports">Reports</Link>
                     </li>
