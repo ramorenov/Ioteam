@@ -26,7 +26,7 @@ class Form extends Component {
         return (
             <div>
                 <form className="formulario" action="Hola">
-                    <h1>Form Elkin</h1>
+                    <h1>Form</h1>
                     <input
                         type="text"
                         name="nombre"
@@ -34,7 +34,7 @@ class Form extends Component {
                         onChange={this.comparar}
                     />
                     {this.state.mostrar ? <p>{this.state.error}</p> : null}
-                    <h2>Telefono:</h2>
+                    <h2>Phone:</h2>
                     <input
                         type="text"
                         name="telefono"

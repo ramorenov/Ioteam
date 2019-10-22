@@ -18,7 +18,9 @@ class Reports extends Component {
                 console.log(data);
                 const sensors = data.map(event => [
                     event.sensor_type,
-                    event.instant_value])
+                    event.instant_value,
+                    event.event_type,
+                    event.createdAt])
 
                 this.setState({
                     sensorData: sensors,
@@ -42,7 +44,7 @@ class Reports extends Component {
             return (
                 <ul>
                     {this.state.sensorData.map((sensor, index) => {
-                        return <li key={index}>{sensor[0] + "........." + sensor[1]}</li>
+                        return <li key={index}>{`${sensor[3]}......${sensor[0]}.......${sensor[1]}......${sensor[2]}`}</li>
                     })}
 
                 </ul>
