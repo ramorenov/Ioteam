@@ -26,11 +26,11 @@ class Form extends Component {
         return (
             <div>
                 <form className="formulario" action="Hola">
-                    <h1>Form</h1>
+                    <h2>Enter your name:</h2>
                     <input
                         type="text"
                         name="nombre"
-                        placeholder="text"
+                        placeholder="Name Complete"
                         onChange={this.comparar}
                     />
                     {this.state.mostrar ? <p>{this.state.error}</p> : null}
@@ -38,6 +38,7 @@ class Form extends Component {
                     <input
                         type="text"
                         name="telefono"
+                        placeholder="Numbers"
                         onChange={this.validacionNumero}
                     />
                 </form>

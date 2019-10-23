@@ -4,21 +4,14 @@ import { Link } from 'react-router-dom';
 class Navbar extends Component {
     render() {
         return (
-            <nav>
-                <ul>
-                    <li>
-                        <Link to="/"><button>Home</button></Link>
-                    </li>
-                    <li>
-                        <Link to="/about"><button>Register</button></Link>
-                    </li>
-                    <li>
-                        <Link to="/DashBoard"><button>DashBoard</button></Link>
-                    </li>
-                    <li>
-                        <Link to="/Reports"><button>Reports</button></Link>
-                    </li>
-                </ul>
+            <nav class="topnav">
+                <Link to="/"><button class="btn-borde">Home</button></Link>
+
+                <Link to="/about"><button class="btn-borde">Register</button></Link>
+
+                <Link to="/DashBoard"><button class="btn-borde">DashBoard</button></Link>
+
+                <Link to="/Reports"><button class="btn-borde">Reports</button></Link>
             </nav >
         )
     }

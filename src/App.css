@@ -4,6 +4,7 @@
 
 .App-logo {
   height: 40vmin;
+  border-radius: 10px
 }
 
 .App-header {
@@ -73,3 +74,28 @@ tr:hover{
   background-color: #036681;
   color: white;
 }
+
+.topnav{
+  
+  color: #f2f2f2;
+  padding: 15px;
+  background-color: rgb(192, 219, 143);
+  display: flex;
+  justify-content: center;
+}
+
+.btn-borde {
+  padding: .375rem .75rem;
+  margin-left: 10px;
+  border: 1px solid #6b88a8;
+  border-radius: .25rem;
+  color: #567699;
+  transition: color .15s ease-in-out,
+    background-color .15s ease-in-out;
+}
+
+.btn-borde:hover, .btn-borde:active, .btn-borde:focus {
+  color: #fff;
+  background-color: #5ba4f3;
+}
+
