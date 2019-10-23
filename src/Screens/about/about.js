@@ -2,9 +2,10 @@ import React, { Component } from 'react'
 
 class Form extends Component {
     state = {
-        error: 'Este espacio vacio',
+        error: 'Este campo No puede estar vacío!!',
         mostrar: false,
-        validNum: false
+        validNum: false,
+        validarEmail: false
     }
     comparar = ({ target: { value } }) => {
         console.log(value)
@@ -22,6 +23,13 @@ class Form extends Component {
         })
     }
 
+    validarEmail = ({ target: { value } }) => {
+        const validateem = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3,4})+$/.test(value);
+        this.setState({
+            validarEmail: !validateem
+        })
+    }
+
     render() {
         return (
             <div>
@@ -31,6 +39,7 @@ class Form extends Component {
                         type="text"
                         name="nombre"
                         placeholder="Name Complete"
+                        autocomplete="off"
                         onChange={this.comparar}
                     />
                     {this.state.mostrar ? <p>{this.state.error}</p> : null}
@@ -39,10 +48,20 @@ class Form extends Component {
                         type="text"
                         name="telefono"
                         placeholder="Numbers"
+                        autocomplete="off"
                         onChange={this.validacionNumero}
                     />
+                    {this.state.validacionNumero ? <p>Este campo solo admite Números</p> : null}
+                    <h2>eMail:</h2>
+                    <input
+                        type="text"
+                        name="mail"
+                        placeholder="email"
+                        autocomplete="off"
+                        onChange={this.validarEmail}
+                    />
+                    {this.state.validarEmail ? <p>campo imcorrecto</p> : null}
                 </form>
-                {this.state.validacionNumero ? <p>Este campo solo admite Números</p> : null}
             </div>
         )
     }
