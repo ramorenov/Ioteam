@@ -7,16 +7,16 @@ class Navbar extends Component {
             <nav>
                 <ul>
                     <li>
-                        <Link to="/">Home</Link>
+                        <Link to="/"><button>Home</button></Link>
                     </li>
                     <li>
-                        <Link to="/about">Register</Link>
+                        <Link to="/about"><button>Register</button></Link>
                     </li>
                     <li>
-                        <Link to="/DashBoard">DashBoard</Link>
+                        <Link to="/DashBoard"><button>DashBoard</button></Link>
                     </li>
                     <li>
-                        <Link to="/Reports">Reports</Link>
+                        <Link to="/Reports"><button>Reports</button></Link>
                     </li>
                 </ul>
             </nav >

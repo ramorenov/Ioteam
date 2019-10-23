@@ -80,7 +80,7 @@ class Reports extends Component {
     } else if (!this.state.isLoading) {
       return (
         <div>
-          <div className="App-container">
+          <div className="App-container" class="tablerep">
             <Search search={this.search} />
             <SearchReport results={this.state.sensorData} />
           </div>

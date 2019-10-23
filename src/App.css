@@ -17,10 +17,6 @@
   color: white;
 }
 
-.App-link {
-  color: #09d3ac;
-}
-
 .Report-Table {
   background-color: #282c34;
   min-height: 100vh;
@@ -29,5 +25,51 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.tablerep, .titrep{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tablemain{
+  border: 1px solid #ccc;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border-collapse: collapse;
+  border-spacing: 0
+}
+table tr{
+  border: 2px solid #ddd;
+  padding: 5px;
+}
+
+table td, table th{
+  padding: 6px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+h4{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.datbody{
+  border: 2px solid rgb(19, 13, 13);
+  padding: 1px;
+  
+}
+
+thead{
+  background-color: #98e0cf;
+  color: rgb(24, 19, 19);
+  border-bottom: solid 3px #0f362d
+}
+
+tr:hover{
+  background-color: #036681;
   color: white;
 }
