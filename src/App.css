@@ -54,8 +54,8 @@ table td, table th{
   letter-spacing: 1px;
 }
 
-h4{
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+h4, h1{
+  font-family: Verdana, Geneva, Tahoma, sans-serif
 }
 
 .datbody{
