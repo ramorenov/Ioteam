@@ -35,7 +35,7 @@ class Search extends Component {
   render() {
     return (
       <div className="search">
-        <div className="page-header" class="titrep">
+        <div className="titrep">
           <h4 className="text-left">Search Report</h4>
         </div>
         <div className="row search-wrapper">

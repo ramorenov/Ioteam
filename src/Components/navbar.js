@@ -9,7 +9,7 @@ class Navbar extends Component {
           <button className="btn-borde">Home</button>
         </Link>
 
-        <Link to="/about">
+        <Link to="/Form">
           <button className="btn-borde">Register</button>
         </Link>
 
