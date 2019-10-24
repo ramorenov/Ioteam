@@ -40,14 +40,12 @@ class DashBoard extends Component {
       return <span> something went wrong </span>;
     } else if (!this.state.isLoading) {
       return (
-        <div>
-          <div className="App-container">Realtime data</div>
-
-          <ul>
-            <li>Gas sensor {this.state.realTimeData.gasSensor}</li>
-            <li>Temperature sensor {this.state.realTimeData.tempSensor}</li>
-            <li>Voltage sensor {this.state.realTimeData.potSensor}</li>
-          </ul>
+        <div className="wraper">
+          <div className="wraper-reg"><h2>Realtime Data</h2>
+            <p>Gas sensor {this.state.realTimeData.gasSensor}</p>
+            <p>Temperature sensor {this.state.realTimeData.tempSensor}</p>
+            <p>Voltage sensor {this.state.realTimeData.potSensor}</p>
+          </div>
         </div>
       );
     }

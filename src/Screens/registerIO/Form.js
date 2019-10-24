@@ -65,48 +65,51 @@ class Form extends Component {
         return (
             <Fragment>
                 <form onSubmit={event => this.handleSubmit(event)}>
-                    <h2>Register Form</h2>
-                    <label htmlFor="name">Nombre: </label>
-                    <input
-                        id="name"
-                        type="text"
-                        name="name"
-                        onChange={this.handleOnChange}
-                    /><br />
-                    <label htmlFor="lastname">Apellido: </label>
-                    <input
-                        id="lastName"
-                        type="text"
-                        name="lastname"
-                        onChange={this.handleOnChange}
-                    /><br />
-                    <label htmlFor="age">Edad: </label>
-                    <input
-                        id="age"
-                        type="text"
-                        name="age"
-                        onChange={this.handleOnChange}
-                    /><br />
-                    <label htmlFor="age">Email: </label>
-                    <input
-                        id="email"
-                        type="text"
-                        name="email"
-                        onChange={this.handleOnChange}
-                    /><br />
-                    {/* {this.validateEmail ? '' : <span>
+                    <div className="wraper">
+                        <div className="wraper-reg"><h2>Register Form</h2>
+                            <label htmlFor="name">Nombre: </label>
+                            <input
+                                id="name"
+                                type="text"
+                                name="name"
+                                onChange={this.handleOnChange}
+                            /><br />
+                            <label htmlFor="lastname">Apellido: </label>
+                            <input
+                                id="lastName"
+                                type="text"
+                                name="lastname"
+                                onChange={this.handleOnChange}
+                            /><br />
+                            <label htmlFor="age">Edad: </label>
+                            <input
+                                id="age"
+                                type="text"
+                                name="age"
+                                onChange={this.handleOnChange}
+                            /><br />
+                            <label htmlFor="age">Email: </label>
+                            <input
+                                id="email"
+                                type="text"
+                                name="email"
+                                onChange={this.handleOnChange}
+                            /><br />
+                            {/* {this.validateEmail ? '' : <span>
             'Password must be 8 characters long!'</span>} */}
 
-                    <label htmlFor="password">password: </label>
-                    <input
-                        id="password"
-                        type="password"
-                        name="password"
-                        onChange={this.handleOnChange}
-                    />
-                    <button type="submit" value="Enviar" disabled={this.state.isInValid}>
-                        enviar
+                            <label htmlFor="password">Password: </label>
+                            <input
+                                id="password"
+                                type="password"
+                                name="password"
+                                onChange={this.handleOnChange}
+                            /><br />
+                            <button type="submit" value="Enviar" className="btn-border" disabled={this.state.isInValid}>
+                                enviar
           </button>
+                        </div>
+                    </div>
                 </form>
                 {/* <Counter
           count={this.state.count}

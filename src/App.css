@@ -99,3 +99,41 @@ tr:hover{
   background-color: #75a8df;
 }
 
+.btn-border {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: .375rem .75rem;
+  width: 40%
+
+}
+
+h2{
+  display: flex;
+  justify-content: center;
+}
+
+.wraper{
+  height: 97vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+.wraper-reg{
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  max-width: 80%;
+  min-width: 100px;
+  min-height: 400px;
+  padding: 20px 40px;
+  border-radius: 6px;
+  box-shadow: 0px 8px 36px #222;
+  background-color: #fefefe;
+}
+
+
