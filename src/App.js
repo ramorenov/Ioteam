@@ -1,7 +1,7 @@
 import React from "react";
 import Home from "./Screens/home/home";
 import Navbar from "./Components/navbar";
-import About from "./Screens/about/about";
+import Form from "./Screens/registerIO/Form";
 import NotFound from "./Screens/not-found/notFound";
 import DashBoard from "./Screens/dashboard/dashboard";
 import Reports from "./Screens/reports/Reports";
@@ -15,8 +15,8 @@ function App() {
         <Route exact path="/">
           <Home />
         </Route>
-        <Route exact path="/about">
-          <About />
+        <Route exact path="/Form">
+          <Form />
         </Route>
         <Route exact path="/Reports">
           <Reports />

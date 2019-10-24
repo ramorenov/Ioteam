@@ -22,7 +22,7 @@ class SearchResult extends Component {
 
     return (
       <div className="table" >
-        <table className="table table-bordered" class="tablemain">
+        <table className="tablemain" >
           <thead>
             <tr>
               <th scope="col">Date</th>
@@ -33,7 +33,7 @@ class SearchResult extends Component {
               <th scope="col">State</th>
             </tr>
           </thead>
-          <tbody class="datbody">{data}</tbody>
+          <tbody className="datbody">{data}</tbody>
         </table>
       </div>
     );
