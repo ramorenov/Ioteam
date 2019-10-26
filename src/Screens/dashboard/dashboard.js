@@ -14,7 +14,7 @@ class DashBoard extends Component {
       .then(res => res.json())
       .then(data => {
         const datares = Object.assign({}, data);
-        console.log(datares);
+        // console.log(datares);
         this.setState({
           realTimeData: datares,
           isLoading: false
@@ -30,7 +30,7 @@ class DashBoard extends Component {
   };
 
   componentDidMount = () => {
-    this.recursiveFetch();
+    // this.recursiveFetch();
   };
 
   render() {

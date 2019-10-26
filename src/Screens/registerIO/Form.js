@@ -2,7 +2,6 @@ import React, { Component, Fragment } from "react";
 // import Counter from "./Counter";
 class Form extends Component {
     state = {
-        count: 0,
         email: '',
         password: '',
         isInValid: true,
@@ -14,7 +13,26 @@ class Form extends Component {
 
     handleSubmit = event => {
         event.preventDefault();
-        console.log(this.state);
+
+        const registerData = {
+            name: this.state.name,
+            lastname: this.state.lastname,
+            email: this.state.email,
+            password: this.state.password
+        }
+        console.log(this.state)
+        console.log(JSON.stringify(registerData));
+        fetch('https://ioteamcyf2019.herokuapp.com/api/v1/user/sing-up', {
+            method: 'POST',
+            headers: { "Content-type": "application/json" },
+            body: JSON.stringify(registerData)
+        })
+            .then(function (res) {
+                return console.log(res.json())
+
+            }).catch(function (res) {
+                return console.log(res.json())
+            })
     };
 
     handleOnChange = event => {
@@ -67,27 +85,27 @@ class Form extends Component {
                 <form onSubmit={event => this.handleSubmit(event)}>
                     <div className="wraper">
                         <div className="wraper-reg"><h2>Register Form</h2>
-                            <label htmlFor="name">Nombre: </label>
+                            <label htmlFor="name">Name: </label>
                             <input
                                 id="name"
                                 type="text"
                                 name="name"
                                 onChange={this.handleOnChange}
                             /><br />
-                            <label htmlFor="lastname">Apellido: </label>
+                            <label htmlFor="lastname">Lastname: </label>
                             <input
-                                id="lastName"
+                                id="lastname"
                                 type="text"
                                 name="lastname"
                                 onChange={this.handleOnChange}
                             /><br />
-                            <label htmlFor="age">Edad: </label>
+                            {/* <label htmlFor="age">Edad: </label>
                             <input
                                 id="age"
                                 type="text"
                                 name="age"
                                 onChange={this.handleOnChange}
-                            /><br />
+                            /><br /> */}
                             <label htmlFor="age">Email: </label>
                             <input
                                 id="email"
@@ -95,8 +113,8 @@ class Form extends Component {
                                 name="email"
                                 onChange={this.handleOnChange}
                             /><br />
-                            {/* {this.validateEmail ? '' : <span>
-            'Password must be 8 characters long!'</span>} */}
+                            {this.validateEmail ? '' : <span>
+                                'Password must be 8 characters long!'</span>}
 
                             <label htmlFor="password">Password: </label>
                             <input
