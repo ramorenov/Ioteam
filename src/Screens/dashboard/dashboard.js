@@ -1,20 +1,17 @@
 import React, { Component } from "react";
+import Sensorchart from "./sensorchart";
 
-class DashBoard extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      realTimeData: {},
-      isLoading: true
-    };
-  }
+class Dashboard extends Component {
+  state = {
+    realTimeData: []
+  };
 
-  recursiveFetch = () => {
+  getSensorData = () => {
     fetch("https://ioteamcyf2019.herokuapp.com/api/v1/sensors/realtime")
       .then(res => res.json())
       .then(data => {
         const datares = Object.assign({}, data);
-        // console.log(datares);
+
         this.setState({
           realTimeData: datares,
           isLoading: false
@@ -26,30 +23,30 @@ class DashBoard extends Component {
           err: err
         });
       });
-    setTimeout(this.recursiveFetch, 5000);
+    //console.log(this.state.realTimeData);
+    setTimeout(this.getSensorData, 5000);
   };
 
-  componentDidMount = () => {
-    // this.recursiveFetch();
-  };
+  componentDidMount() {
+    this.getSensorData();
+  }
 
   render() {
-    if (this.state.isLoading) {
-      return <span>Loading....</span>;
-    } else if (this.state.err) {
-      return <span> something went wrong </span>;
-    } else if (!this.state.isLoading) {
-      return (
-        <div className="wraper">
-          <div className="wraper-reg"><h2>Realtime Data</h2>
-            <p>Gas sensor {this.state.realTimeData.gasSensor}</p>
-            <p>Temperature sensor {this.state.realTimeData.tempSensor}</p>
-            <p>Voltage sensor {this.state.realTimeData.potSensor}</p>
-          </div>
-        </div>
-      );
-    }
+    return (
+      <div className="chart-container">
+        <h2>My Dashboard</h2>
+        <Sensorchart
+          sensor={this.state.realTimeData.gasSensor}
+          sensorName={"GasSensor"}
+          color={"rgba(50,220,220,0.5)"}
+        />
+        <Sensorchart
+          sensor={this.state.realTimeData.tempSensor}
+          sensorName={"TempSensor"}
+        />
+      </div>
+    );
   }
 }
 
-export default DashBoard;
+export default Dashboard;
