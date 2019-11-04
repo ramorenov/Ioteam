@@ -1,6 +1,6 @@
 import React from 'react'
 import code from '../../img/ioteamlog.png'
-import '../../App.css';
+import '../../App.scss';
 
 function Home() {
     return (
