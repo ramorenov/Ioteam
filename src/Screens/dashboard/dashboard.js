@@ -5,7 +5,7 @@ class Dashboard extends Component {
   state = {
     realTimeData: []
   };
-
+  timer = null;
   getSensorData = () => {
     fetch("https://ioteamcyf2019.herokuapp.com/api/v1/sensors/realtime")
       .then(res => res.json())
@@ -24,11 +24,15 @@ class Dashboard extends Component {
         });
       });
     //console.log(this.state.realTimeData);
-    setTimeout(this.getSensorData, 5000);
+    this.timer = setTimeout(this.getSensorData, 5000);
   };
 
   componentDidMount() {
     this.getSensorData();
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.timer);
   }
 
   render() {
