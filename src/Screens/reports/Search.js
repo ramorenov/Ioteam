@@ -36,13 +36,13 @@ class Search extends Component {
     return (
       <div className="search">
         <div className="titrep">
-          <h4 className="text-left">Search Report</h4>
+          <h3 className="text-left">Search Report</h3>
         </div>
         <div className="row search-wrapper">
           <div className="col">
             <form className="form-group search-box" onSubmit={this.handleForm}>
               <div className="search-row">
-                <label htmlFor="Init Date"> Init date</label>
+                <label htmlFor="Init Date"> Init Date: </label>
                 <input
                   type="date"
                   id="InitDate"
@@ -51,7 +51,7 @@ class Search extends Component {
                   onChange={this.handleInitDateInput}
                 />
 
-                <label htmlFor="Final Date"> Final date</label>
+                <label htmlFor="Final Date"> Final Date: </label>
                 <input
                   type="date"
                   id="FinalDate"
@@ -60,7 +60,7 @@ class Search extends Component {
                   onChange={this.handleFinalDateInput}
                 />
 
-                <label htmlFor="SensorType">Sensor type</label>
+                <label htmlFor="SensorType"> Sensor Type: </label>
                 <input
                   value={this.state.sensorTypeInput}
                   type="text"
