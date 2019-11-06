@@ -89,7 +89,7 @@ tr:hover {
 .topnav {
   color: #f2f2f2;
   padding: 6px;
-  background-color: rgb(192, 219, 143);
+  background-color: #474b4f;
   display: flex;
   justify-content: center;
 }
@@ -97,17 +97,18 @@ tr:hover {
 .btn-borde {
   padding: 0.375rem 0.75rem;
   margin-left: 10px;
-  border: 1px solid #6b88a8;
+  border: 1px solid #61892f;
   border-radius: 0.25rem;
-  color: #567699;
+  background: #86c232;
+  color: #ffffff;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
 }
 
 .btn-borde:hover,
 .btn-borde:active,
 .btn-borde:focus {
-  color: #fff;
-  background-color: #75a8df;
+  color: #222629;
+  background-color: #ffffff;
 }
 
 .btn-border {
@@ -181,7 +182,7 @@ h2 {
     flex-direction: column;
     justify-content: center;
     height: 80%;
-    background-color: #3498db;
+    background-color: #61892f;
     width: 95%;
     position: absolute;
     right: -34%;
@@ -221,13 +222,16 @@ h2 {
   font-size: 21px;
   padding: 5px 20px;
   border: 0;
-  background-color: #3498db;
+  background-color: #86c232;
   color: #fff;
   border-radius: 3px;
   transition: all 250ms ease-in-out;
   cursor: pointer;
   &:hover {
-    background-color: #2386c8;
+    color: #222629;
+    background-color: #ffffff;
+    border: 1px solid #61892f;
+    border-radius: 0.25rem;
   }
   &:focus {
     outline: none;

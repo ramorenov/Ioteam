@@ -1,41 +1,43 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-
 class Navbar extends Component {
   constructor(props) {
-    super(props)
-
+    super(props);
     this.state = {
-      loggued: false
+      logged: false
     };
   }
 
   componentDidMount() {
-    this.verifyUserLogin()
-  };
+    this.verifyUserLogin();
+  }
 
   verifyUserLogin = () => {
     // verify if exists token
-    const token = localStorage.getItem("token")
+    const token = localStorage.getItem("token");
     if (!token) {
-      this.state({ loggued: false })
-      console.log("token desde localstorage: ", token)
+      this.setState({ logged: false });
     } else {
-      console.log(token);
-      fetch('https://ioteamcyf2019.herokuapp.com/api/v1/user/verify-token', {
-        method: 'GET',
-        headers: { 'Content-type': 'application/json', 'Authorization': token },
+      fetch("https://ioteamcyf2019.herokuapp.com/api/v1/user/verify-token", {
+        method: "GET",
+        headers: {
+          "Content-type": "application/json",
+          authorization: token
+        }
       })
-        .then(function (res) {
-          // this.setState({ loggued: isValid === 0 ? false : true })
-          return console.log("validacion de token desde back", res.json())
-
-        }).catch(function (res) {
-          return console.log(res.json())
+        .then(res => {
+          return res.json();
         })
+        .then(res => {
+          this.setState({ logged: res.valid });
+          console.log(this.state.logged);
+        })
+        .catch(function(res) {
+          return console.log(res);
+        });
     }
-  }
+  };
 
   render() {
     return (

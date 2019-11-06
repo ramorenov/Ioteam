@@ -41,7 +41,7 @@ class Reports extends Component {
 
   search = (InitDate, FinalDate, sensorType) => {
     //console.info("TO DO!", sensorType);
-    console.log(InitDate, FinalDate, sensorType);
+    //console.log(InitDate, FinalDate, sensorType);
     if (InitDate === "" && FinalDate === "" && sensorType === "") {
       const filterdata = this.state.originData;
       this.setState({ sensorData: filterdata });
@@ -54,20 +54,20 @@ class Reports extends Component {
       if (FinalDate >= InitDate && InitDate !== "") {
         if (sensorType === "") {
           const filterdata = this.state.originData.filter(
-            item => item.date > InitDate && item.date < FinalDate
+            item => item.date >= InitDate && item.date <= FinalDate
           );
           this.setState({ sensorData: filterdata });
         } else {
           const filterdata = this.state.originData.filter(
             item =>
-              item.date > InitDate &&
-              item.date < FinalDate &&
+              item.date >= InitDate &&
+              item.date <= FinalDate &&
               item.sensor_type === sensorType
           );
           this.setState({ sensorData: filterdata });
         }
       } else {
-        alert("El rango de fechas no es correcto");
+        alert("The date range is not correct");
       }
     }
   };
