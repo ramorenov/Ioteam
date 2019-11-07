@@ -57,13 +57,14 @@ export class Login extends React.Component {
                 type="text"
                 name="email"
                 placeholder="email"
+                autoComplete="off"
                 onChange={this.handleOnChange}
               ></input>
             </div>
             <div className="form-group">
               <label htmlFor="password">Password </label>
               <input
-                type="text"
+                type="password"
                 name="password"
                 placeholder="password"
                 onChange={this.handleOnChange}

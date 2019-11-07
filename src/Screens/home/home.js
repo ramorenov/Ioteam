@@ -3,7 +3,7 @@ import React from "react";
 import "../../App.scss";
 import Carouselimg from "./carousel";
 import loginImg from "../../img/logo_transparent.png";
-// import Footer from '../../Components/footer';
+import Redes from '../../Components/redes';
 
 function Home() {
     return (
@@ -19,7 +19,7 @@ function Home() {
 
                 {/* <img src={code} className="App-logo" alt="logo" />  */}
             </header>
-
+            <Redes />
         </div>
     );
 }
