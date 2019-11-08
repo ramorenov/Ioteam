@@ -42,7 +42,7 @@ class Dashboard extends Component {
         <Sensorchart
           sensor={this.state.realTimeData.gasSensor}
           sensorName={"GasSensor"}
-          color={"rgba(50,220,220,0.5)"}
+          color={"#86c232"}
         />
         <Sensorchart
           sensor={this.state.realTimeData.tempSensor}

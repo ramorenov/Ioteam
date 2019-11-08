@@ -12,7 +12,7 @@ class Carouselimg extends Component {
         showStatus={false}
         transitionTime={350}
         interval={5000}
-        width={"800px"}
+        //width={"800px"}
         dinamicHeight={true}
       >
         <div>

@@ -1,8 +1,8 @@
 import React from "react";
 import loginImg from "../../img/login.png";
-// import logotip from '../../img/logo_transparent.png'
+import { MyContext } from "../../App";
 
-export class Login extends React.Component {
+class LoginPrev extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -26,8 +26,15 @@ export class Login extends React.Component {
       .then(function(res) {
         return res.json();
       })
-      .then(function(res) {
+      .then(res => {
+        if (!res.token) {
+          this.props.contextValue.toogleLogged(false);
+        } else {
+          this.props.contextValue.toogleLogged(true);
+        }
+
         localStorage.setItem("token", res.token);
+
         return alert(res.message);
       })
       .catch(function(res) {
@@ -50,21 +57,25 @@ export class Login extends React.Component {
           <div className="image">
             <img src={loginImg} alt="logo" />
           </div>
-          <form onSubmit={event => this.handleSubmit(event)} className="form">
+          <form
+            onSubmit={event => {
+              this.handleSubmit(event);
+            }}
+            className="form"
+          >
             <div className="form-group">
               <label htmlFor="email">Email </label>
               <input
                 type="text"
                 name="email"
                 placeholder="email"
-                autoComplete="off"
                 onChange={this.handleOnChange}
               ></input>
             </div>
             <div className="form-group">
               <label htmlFor="password">Password </label>
               <input
-                type="password"
+                type="text"
                 name="password"
                 placeholder="password"
                 onChange={this.handleOnChange}
@@ -82,3 +93,9 @@ export class Login extends React.Component {
     );
   }
 }
+
+export const Login = props => (
+  <MyContext.Consumer>
+    {value => <LoginPrev {...props} contextValue={value} />}
+  </MyContext.Consumer>
+);
