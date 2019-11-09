@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Sensorchart from "./sensorchart";
 
+
 class Dashboard extends Component {
   state = {
     realTimeData: []
@@ -37,8 +38,14 @@ class Dashboard extends Component {
 
   render() {
     return (
-      <div className="chart-container">
+      <div className="wrapper">
         <h2>My Dashboard</h2>
+        <div className="chart-container">
+        <Sensorchart
+          sensor={this.state.realTimeData.gasSensor}
+          sensorName={"GasSensor"}
+          color={"#86c232"}
+        />
         <Sensorchart
           sensor={this.state.realTimeData.gasSensor}
           sensorName={"GasSensor"}
@@ -48,6 +55,11 @@ class Dashboard extends Component {
           sensor={this.state.realTimeData.tempSensor}
           sensorName={"TempSensor"}
         />
+        <Sensorchart
+          sensor={this.state.realTimeData.tempSensor}
+          sensorName={"TempSensor"}
+        />
+        </div>
       </div>
     );
   }

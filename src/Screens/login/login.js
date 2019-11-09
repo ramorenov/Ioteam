@@ -66,18 +66,20 @@ class LoginPrev extends React.Component {
             <div className="form-group">
               <label htmlFor="email">Email </label>
               <input
-                type="text"
+                type="email"
                 name="email"
                 placeholder="email"
+                autoComplete="off"
                 onChange={this.handleOnChange}
               ></input>
             </div>
             <div className="form-group">
               <label htmlFor="password">Password </label>
               <input
-                type="text"
+                type="password"
                 name="password"
                 placeholder="password"
+                autoComplete="off"
                 onChange={this.handleOnChange}
               ></input>
             </div>

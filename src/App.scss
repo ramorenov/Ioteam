@@ -4,9 +4,9 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  border-radius: 10px;
+img{
+  max-width: 100%;
+  width: 17%
 }
 
 .App-header {
@@ -20,6 +20,8 @@
   color: white;
 }
 .App-carousel {
+  max-width: 100%;
+  width: 890px;
   margin-top: -10px;
   background-color: #282c34;
   min-height: 70vh;
@@ -27,6 +29,13 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.chart-container{
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  width: 110%;
+  margin-left: 2%
 }
 
 .Report-Table {
