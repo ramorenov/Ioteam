@@ -24,7 +24,7 @@ class Dashboard extends Component {
         });
       });
     //console.log(this.state.realTimeData);
-    this.timer = setTimeout(this.getSensorData, 5000);
+    this.timer = setTimeout(this.getSensorData, 2000);
   };
 
   componentDidMount() {
