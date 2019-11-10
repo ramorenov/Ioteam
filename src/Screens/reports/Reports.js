@@ -40,8 +40,6 @@ class Reports extends Component {
   };
 
   search = (InitDate, FinalDate, sensorType) => {
-    //console.info("TO DO!", sensorType);
-    //console.log(InitDate, FinalDate, sensorType);
     if (InitDate === "" && FinalDate === "" && sensorType === "") {
       const filterdata = this.state.originData;
       this.setState({ sensorData: filterdata });
