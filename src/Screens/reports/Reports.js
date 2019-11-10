@@ -29,7 +29,6 @@ class Reports extends Component {
           sensorData: dataFormated,
           isLoading: false
         });
-        //console.log(dataFormated);
       })
       .catch(err => {
         this.setState({
