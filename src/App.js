@@ -66,10 +66,10 @@ class App extends React.Component {
             <Route exact path="/">
               <Home />
             </Route>
-            <Route exact path="/Form">
+            <Route exact path="/form">
               <Form />
             </Route>
-            <Route exact path="/Reports">
+            <Route exact path="/reports">
               <Reports />
             </Route>
             <Route exact path="/dashboard">

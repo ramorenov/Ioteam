@@ -27,7 +27,7 @@ class Navbar extends Component {
         <Link to="/">
           {logged && (
             <button onClick={() => toogleLogged(false)} className="btn-borde">
-              LoggOut
+              LogOut
             </button>
           )}
         </Link>
