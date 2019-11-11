@@ -28,10 +28,13 @@ export class Register extends React.Component {
       body: JSON.stringify(registerData)
     })
       .then(function(res) {
-        return console.log(res.json());
+        return res.json();
+      })
+      .then(function(res) {
+        return alert(res.message);
       })
       .catch(function(res) {
-        return console.log(res.json());
+        return alert(res.message);
       });
   };
 
