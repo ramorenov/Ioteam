@@ -1,7 +1,7 @@
 .red{
 	position: fixed;
-	left: 0;
-	top: 200px;
+	right: 0;
+	top: 350px;
 	z-index: 2000;
 	
 }
@@ -14,8 +14,9 @@
 	transition: all .4s ease;
 }
 #facebook a:hover{
-	background: #000;
-	padding: 10px 30px;
+	background: #61892f;
+	padding: 10px 26px;
+	border-radius: 7px;
 }
 #youtube a{
 	// background: #bb0000;
@@ -26,8 +27,9 @@
 	transition: all .4s ease;
 }
 #youtube a:hover{
-	background: #000;
-	padding: 10px 30px;
+	background: #61892f;
+	padding: 10px 26px;
+	border-radius: 7px;
 }
 #twitter a{
 	// background: #55acee;
@@ -38,8 +40,9 @@
 	transition: all .4s ease;
 }
 #twitter a:hover{
-	background: #000;
-	padding: 10px 30px;
+	background: #61892f;
+	padding: 10px 26px;
+	border-radius: 7px;
 }
 #correo a{
 	// background: #e95950;
@@ -50,6 +53,7 @@
 	transition: all .4s ease;
 }
 #correo a:hover{
-	background: #000;
-	padding: 10px 30px;
+	background: #61892f;
+	padding: 10px 26px;
+	border-radius: 7px;
 }

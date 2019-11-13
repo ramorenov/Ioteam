@@ -12,15 +12,15 @@ class Navbar extends Component {
           <button className="btn-borde">Home</button>
         </Link>
 
-        <Link to="/Form">
+        <Link to="/form">
           <button className="btn-borde">Account</button>
         </Link>
 
-        <Link to="/DashBoard">
+        <Link to="/dashboard">
           {logged && <button className="btn-borde">DashBoard</button>}
         </Link>
 
-        <Link to="/Reports">
+        <Link to="/reports">
           {logged && <button className="btn-borde">Reports</button>}
         </Link>
 
