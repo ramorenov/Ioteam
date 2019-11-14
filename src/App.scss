@@ -1,12 +1,12 @@
 @import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 
 .App {
-  // text-align: center;
+  text-align: center;
 }
 
-img{
+img {
   max-width: 100%;
-  width: 17%
+  width: 17%;
 }
 
 .App-header {
@@ -19,19 +19,8 @@ img{
   font-size: calc(10px + 2vmin);
   color: white;
 }
-.App-carousel {
-  max-width: 100%;
-  width: 890px;
-  margin-top: -10px;
-  background-color: #282c34;
-  min-height: 70vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
 
-.chart-container{
+.chart-container {
   display: grid;
   grid-template-columns: 2fr 2fr;
   width: 110%;
@@ -101,13 +90,12 @@ tr:hover {
   // position:fixed;
   // z-index:1000;
   // max-width:100%;
-  width:100%;
+  width: 100%;
   color: #f2f2f2;
   padding: 6px;
   background-color: #474b4f;
   display: flex;
   justify-content: center;
-  
 }
 
 .btn-borde {
