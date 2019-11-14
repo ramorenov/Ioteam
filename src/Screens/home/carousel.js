@@ -3,9 +3,9 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import "../../App.scss";
 import ioteam from "../../img/Ioteam.gif";
-import greenhouse from "../../img/greenhouse.png";
-import hydroponic from "../../img/hydroponic.png";
-import allaccess from "../../img/allaccess.png";
+import greenhouse from "../../img/greenhouse-min.png";
+import hydroponic from "../../img/hydroponic-min.png";
+import allaccess from "../../img/allaccess-min.png";
 
 class Carouselimg extends Component {
   render() {
