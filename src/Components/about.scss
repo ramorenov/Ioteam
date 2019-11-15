@@ -1,7 +1,8 @@
 nav {
 	background:#61892f;
 	margin-top:0;
-    position: relative;
+	position: relative;
+	
 }
  
 nav ul {
@@ -9,7 +10,7 @@ nav ul {
 	padding: 0;
 	margin:auto;
     overflow:hidden;
-    color: aqua;
+    color: whitesmoke;
 }
  
 nav > ul > li {
@@ -26,12 +27,13 @@ nav ul li a {
  
 nav ul li a:hover {
 	background:#282c34;
-	font-size: 30px;
+	font-size: 24px;
+	
 }
  
 nav > ul > li:hover div {
     display: contents;
-    font-size: 140%
+	font-size: 120%;
 }
  
 /*Submenu*/
