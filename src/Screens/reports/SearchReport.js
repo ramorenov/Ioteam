@@ -21,8 +21,8 @@ class SearchResult extends Component {
     });
 
     return (
-      <div className="table" >
-        <table className="tablemain" >
+      <div className="table">
+        <table className="tablemain">
           <thead>
             <tr>
               <th scope="col">Date</th>
@@ -33,7 +33,7 @@ class SearchResult extends Component {
               <th scope="col">State</th>
             </tr>
           </thead>
-          <tbody className="datbody">{data}</tbody>
+          <tbody className="datbody">{data.reverse()}</tbody>
         </table>
       </div>
     );

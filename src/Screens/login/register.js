@@ -8,7 +8,8 @@ export class Register extends React.Component {
       name: "",
       lastname: "",
       email: "",
-      password: ""
+      password: "",
+      message: ""
     };
   }
 
@@ -27,14 +28,16 @@ export class Register extends React.Component {
       headers: { "Content-type": "application/json" },
       body: JSON.stringify(registerData)
     })
-      .then(function(res) {
+      .then(res => {
         return res.json();
       })
-      .then(function(res) {
-        return alert(res.message);
+      .then(res => {
+        return this.setState({ message: res.message });
+        //return alert(res.message);
       })
-      .catch(function(res) {
-        return alert(res.message);
+      .catch(res => {
+        return this.setState({ message: res.message });
+        //return alert(res.message);
       });
   };
 
@@ -53,6 +56,7 @@ export class Register extends React.Component {
           <div className="image">
             <img src={registerImg} alt="logo" />
           </div>
+          <span>{this.state.message}</span>
           <form onSubmit={event => this.handleSubmit(event)} className="form">
             <div className="form-group">
               <label htmlFor="name">Name</label>

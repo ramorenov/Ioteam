@@ -7,7 +7,8 @@ class LoginPrev extends React.Component {
     super(props);
     this.state = {
       email: "",
-      password: ""
+      password: "",
+      message: ""
     };
   }
 
@@ -34,11 +35,13 @@ class LoginPrev extends React.Component {
         }
 
         localStorage.setItem("token", res.token);
+        return this.setState({ message: res.message });
 
-        return alert(res.message);
+        //return alert(res.message);
       })
       .catch(function(res) {
-        return console.log(res.json());
+        return this.setState({ message: res.json() });
+        // return console.log(res.json());
       });
   };
 
@@ -57,6 +60,8 @@ class LoginPrev extends React.Component {
           <div className="image">
             <img src={loginImg} alt="logo" />
           </div>
+          <span> {this.state.message}</span>
+
           <form
             onSubmit={event => {
               this.handleSubmit(event);
