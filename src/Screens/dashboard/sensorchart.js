@@ -21,6 +21,7 @@ class Sensorchart extends Component {
       chartOptions: {
         responsive: true,
         maintainAspectRatio: true,
+
         tooltips: {
           enabled: true
         },
@@ -61,7 +62,7 @@ class Sensorchart extends Component {
 
   render() {
     return (
-      <div className="chart-container">
+      <div className="sensor-chart">
         <Chart
           chartData={this.state.chartData}
           chartOptions={this.state.chartOptions}
