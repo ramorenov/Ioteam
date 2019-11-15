@@ -1,68 +1,60 @@
 nav {
-	background:#61892f;
-	margin-top:0;
-	position: relative;
-	
+  background: #61892f;
+  margin-top: 0;
+  position: relative;
 }
- 
+
 nav ul {
-	list-style:none;
-	padding: 0;
-	margin:auto;
-    overflow:hidden;
-    color: whitesmoke;
+  list-style: none;
+  padding: 0;
+  margin: auto;
+  overflow: hidden;
+  color: whitesmoke;
 }
- 
+
 nav > ul > li {
-	float:left;
+  float: left;
 }
- 
+
 nav ul li a {
-	text-decoration:none;
-	color:rgb(237, 240, 232);
-	display:block;
-    padding:10px 90px;
-    font-size: 120%
+  text-decoration: none;
+  color: rgb(237, 240, 232);
+  display: block;
+  padding: 10px 90px;
+  font-size: 120%;
 }
- 
+
 nav ul li a:hover {
-	background:#282c34;
-	font-size: 22px;
-	
+  background: #282c34;
+  font-size: 22px;
 }
- 
+
 nav > ul > li:hover div {
-    display: contents;
-	font-size: 115%;
+  display: contents;
+  font-size: 115%;
 }
- 
+
 /*Submenu*/
 nav ul li div {
-    width:1000px;
-	position: relative;
-	left:0;
-	background:rgb(252, 247, 247);
-	box-sizing:border-box;
-    display:none;
-    border-radius: 5px 
+  width: 1000px;
+  position: relative;
+  left: 0;
+  background: rgb(252, 247, 247);
+  box-sizing: border-box;
+  display: none;
+  border-radius: 5px;
 }
- 
-nav ul li div ul{
-	width:20%;
-	display:table-cell;
-	border-right:3px solid rgba(220, 224, 182, 0.5);
-    box-sizing:border-box;
-    border-radius: 5px 
+
+nav ul li div ul {
+  width: 20%;
+  display: table-cell;
+  border-right: 3px solid rgba(220, 224, 182, 0.5);
+  box-sizing: border-box;
+  border-radius: 5px;
 }
- 
- 
+
 nav ul li div ul .titulo {
-	background:rgb(9, 1, 44);
-    color:rgb(255, 250, 250);
-    border-radius: 5px 
+  background: rgb(9, 1, 44);
+  color: rgba(255, 250, 250, 0.726);
+  border-radius: 5px;
 }
-
-
- 
-
- 

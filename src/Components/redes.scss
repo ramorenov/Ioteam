@@ -1,72 +1,73 @@
-.red{
-	position: fixed;
-	right: 0;
-	top: 350px;
-	z-index: 2000;
-	
+.red {
+  position: fixed;
+  left: 0;
+  top: 220px;
+  z-index: 2000;
 }
-#facebook a{
-	// background: #3b5998;
-	padding: 10px 20px;
-	color: #fff;
-	text-decoration: none;
-	width: 55px;
-	transition: all .4s ease;
+#facebook a {
+  // background: #3b5998;
+  padding: 10px 20px;
+  color: #fff;
+  text-decoration: none;
+  width: 55px;
+  transition: all 0.4s ease;
 }
-#facebook a:hover{
-	background: #61892f;
-	padding: 10px 26px;
-	border-radius: 7px;
+#facebook a:hover {
+  background: #61892f;
+  padding: 10px 26px;
+  border-radius: 7px;
 }
-#youtube a{
-	// background: #bb0000;
-	padding: 10px 20px;
-	color: #fff;
-	text-decoration: none;
-	width: 55px;
-	transition: all .4s ease;
+#youtube a {
+  // background: #bb0000;
+  padding: 10px 20px;
+  color: #fff;
+  text-decoration: none;
+  width: 55px;
+  transition: all 0.4s ease;
 }
-#youtube a:hover{
-	background: #61892f;
-	padding: 10px 26px;
-	border-radius: 7px;
+#youtube a:hover {
+  background: #61892f;
+  padding: 10px 26px;
+  border-radius: 7px;
 }
-#twitter a{
-	// background: #55acee;
-	padding: 10px 20px;
-	color: #fff;
-	text-decoration: none;
-	width: 55px;
-	transition: all .4s ease;
+#twitter a {
+  // background: #55acee;
+  padding: 10px 20px;
+  color: #fff;
+  text-decoration: none;
+  width: 55px;
+  transition: all 0.4s ease;
 }
-#twitter a:hover{
-	background: #61892f;
-	padding: 10px 26px;
-	border-radius: 7px;
+#twitter a:hover {
+  background: #61892f;
+  padding: 10px 26px;
+  border-radius: 7px;
 }
-#correo a{
-	// background: #e95950;
-	padding: 10px 20px;
-	color: #fff;
-	text-decoration: none;
-	width: 55px;
-	transition: all .4s ease;
+#correo a {
+  // background: #e95950;
+  padding: 10px 20px;
+  color: #fff;
+  text-decoration: none;
+  width: 55px;
+  transition: all 0.4s ease;
 }
-#correo a:hover{
-	background: #61892f;
-	padding: 10px 26px;
-	border-radius: 7px;
+#correo a:hover {
+  background: #61892f;
+  padding: 10px 26px;
+  border-radius: 7px;
 }
 
-.footer{
-	width:100%;
-	clear:both;
-	margin:0 auto;
-	padding-top: 9px;
-	padding-bottom: 4px;
-	line-height: 1.6em;
-	text-transform: none;
-	letter-spacing:.1em;
-	text-align: center;
-	background-color: #edf1e8;
+.footer {
+  width: 100%;
+  clear: both;
+  margin: 0 auto;
+  padding-top: 9px;
+  padding-bottom: 4px;
+  line-height: 1.6em;
+  text-transform: none;
+  letter-spacing: 0.1em;
+  text-align: center;
+  background-color: #474b4f;
+  font-size: 75%;
+  color: #fff;
 }
