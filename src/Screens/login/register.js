@@ -33,11 +33,9 @@ export class Register extends React.Component {
       })
       .then(res => {
         return this.setState({ message: res.message });
-        //return alert(res.message);
       })
       .catch(res => {
         return this.setState({ message: res.message });
-        //return alert(res.message);
       });
   };
 

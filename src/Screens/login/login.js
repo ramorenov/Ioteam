@@ -1,6 +1,7 @@
 import React from "react";
 import loginImg from "../../img/login.png";
 import { MyContext } from "../../App";
+import { Redirect } from "react-router";
 
 class LoginPrev extends React.Component {
   constructor(props) {
@@ -8,9 +9,14 @@ class LoginPrev extends React.Component {
     this.state = {
       email: "",
       password: "",
-      message: ""
+      message: "",
+      redirect: false
     };
   }
+
+  componentWillUnmount = () => {
+    this.setState({ redirect: false });
+  };
 
   handleSubmit = event => {
     event.preventDefault();
@@ -32,11 +38,13 @@ class LoginPrev extends React.Component {
           this.props.contextValue.toogleLogged(false);
         } else {
           this.props.contextValue.toogleLogged(true);
+
+          localStorage.setItem("token", res.token);
+
+          this.setState({ redirect: true });
         }
 
-        localStorage.setItem("token", res.token);
         return this.setState({ message: res.message });
-
         //return alert(res.message);
       })
       .catch(function(res) {
@@ -53,6 +61,12 @@ class LoginPrev extends React.Component {
   };
 
   render() {
+    const { redirect } = this.state;
+
+    if (redirect) {
+      return <Redirect to="/dashboard" />;
+    }
+
     return (
       <div className="base-container" ref={this.props.containerRef}>
         <div className="header">Login</div>
