@@ -2,6 +2,7 @@
 
 .App {
   text-align: center;
+  width: 100%;
 }
 
 img {
@@ -19,6 +20,7 @@ img {
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  
 }
 
 .Report-Table {
@@ -82,16 +84,11 @@ tr:hover {
 
 .topnav {
   z-index:900;
- 
-  z-index: 900;
-
-  width: 100%;
   color: #f2f2f2;
   padding: 7px;
   background-color: #474b4f;
   display: flex;
   margin: auto;
-
 }
 
 .btn-borde {
@@ -133,6 +130,7 @@ h2 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  
 }
 
 .wraper-reg {
@@ -241,3 +239,4 @@ h2 {
     outline: none;
   }
 }
+

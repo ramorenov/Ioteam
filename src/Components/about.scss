@@ -25,12 +25,13 @@ nav ul li a {
 }
  
 nav ul li a:hover {
-    background:#282c34;
+	background:#282c34;
+	font-size: 30px;
 }
  
 nav > ul > li:hover div {
     display: contents;
-    font-size: 110%
+    font-size: 140%
 }
  
 /*Submenu*/

@@ -12,17 +12,15 @@ class About extends Component {
 				<div>
 					<ul>
 						<li class="titulo">Mision</li>
-						<li>We are the company We are the companyWe are the companyWe are the companyWe are the company
-                        yWe are the yWe are the 
-                        </li>
+						<li>Provide and develop technological solutions in the IOT field for the benefit of all. </li>
 					</ul>
 					<ul>
 						<li class="titulo">Vision</li>
-						<li>Our company is the best Our company is the bestOur company is the bestOur company is the best</li>
+						<li>Through innovation become leaders in the development, advice and application of IOT technologies in all productive fields (monitoring and response tasks.)</li>
 					</ul>
 					<ul>
-						<li class="titulo">About</li>
-						<li>We usWe usWe usWe usWe us</li>
+						<li class="titulo">Objetive</li>
+						<li>Accompany, advise and develop technological tools according to the needs of our customers.</li>
 					</ul>
 				</div>
 				</li>

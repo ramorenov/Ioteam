@@ -3,6 +3,7 @@ import "../../App.scss";
 import Carouselimg from "./carousel";
 import Redes from "../../Components/redes";
 import About from "../../Components/about";
+import Footer from "../footer/footer"
 
 function Home() {
   return (
@@ -15,6 +16,7 @@ function Home() {
         </div>
       </header>
       <Redes />
+      <Footer />
     </div>
   );
 }
