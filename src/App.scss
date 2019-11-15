@@ -83,12 +83,15 @@ tr:hover {
 .topnav {
   z-index:900;
  
+  z-index: 900;
+
   width: 100%;
   color: #f2f2f2;
   padding: 7px;
   background-color: #474b4f;
   display: flex;
   margin: auto
+  margin: auto;
 }
 
 .btn-borde {

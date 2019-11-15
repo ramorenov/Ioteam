@@ -1,15 +1,22 @@
 import React from "react";
 import loginImg from "../../img/login.png";
 import { MyContext } from "../../App";
+import { Redirect } from "react-router";
 
 class LoginPrev extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       email: "",
-      password: ""
+      password: "",
+      message: "",
+      redirect: false
     };
   }
+
+  componentWillUnmount = () => {
+    this.setState({ redirect: false });
+  };
 
   handleSubmit = event => {
     event.preventDefault();
@@ -31,14 +38,18 @@ class LoginPrev extends React.Component {
           this.props.contextValue.toogleLogged(false);
         } else {
           this.props.contextValue.toogleLogged(true);
+
+          localStorage.setItem("token", res.token);
+
+          this.setState({ redirect: true });
         }
 
-        localStorage.setItem("token", res.token);
-
-        return alert(res.message);
+        return this.setState({ message: res.message });
+        //return alert(res.message);
       })
       .catch(function(res) {
-        return console.log(res.json());
+        return this.setState({ message: res.json() });
+        // return console.log(res.json());
       });
   };
 
@@ -50,6 +61,12 @@ class LoginPrev extends React.Component {
   };
 
   render() {
+    const { redirect } = this.state;
+
+    if (redirect) {
+      return <Redirect to="/dashboard" />;
+    }
+
     return (
       <div className="base-container" ref={this.props.containerRef}>
         <div className="header">Login</div>
@@ -57,6 +74,8 @@ class LoginPrev extends React.Component {
           <div className="image">
             <img src={loginImg} alt="logo" />
           </div>
+          <span> {this.state.message}</span>
+
           <form
             onSubmit={event => {
               this.handleSubmit(event);
