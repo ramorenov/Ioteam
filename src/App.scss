@@ -89,6 +89,7 @@ tr:hover {
   background-color: #474b4f;
   display: flex;
   margin: auto;
+  width: 107%;
 }
 
 .btn-borde {
@@ -106,7 +107,6 @@ tr:hover {
 .btn-borde:hover,
 .btn-borde:active,
 .btn-borde:focus {
-  width: 100%;
   color: #222629;
   background-color: #ffffff;
 }
@@ -116,7 +116,6 @@ tr:hover {
   justify-content: center;
   align-items: center;
   padding: 0.375rem 0.75rem;
-  width: 100%;
 }
 
 h2 {
@@ -126,7 +125,6 @@ h2 {
 
 .wraper {
   height: 97vh;
-  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
